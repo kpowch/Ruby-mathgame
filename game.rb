@@ -12,7 +12,7 @@ class Game
 
   def start_game
     @gm.speak(MathGame::INTRO)
-    set_player_names
+    set_players
     while(@continue_game == true)
       @gm.speak("-------NEW TURN------")
       @continue_game = get_question
@@ -21,7 +21,7 @@ class Game
 
   private
 
-  def set_player_names
+  def set_players
     @gm.speak("Please Enter Your Name, Player 1 : ")
     name = @gm.prompt
     @player1 = MathGame::PLAYER.new(name)
