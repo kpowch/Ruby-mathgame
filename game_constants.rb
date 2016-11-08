@@ -1,4 +1,9 @@
-module GameConstants
+require './question'
+require './player'
+require './gamemaster'
+
+
+class MathGame
   INTRO =
     """
     Welcome to the math game!
@@ -8,4 +13,7 @@ module GameConstants
     is generated at random.. its not going to be easy and the
     consequences for losing are dire...
     """
+  QUESTION = QuestionMaster.new
+  PLAYER = Player
+  GAME_MASTER = GameMaster.new
 end

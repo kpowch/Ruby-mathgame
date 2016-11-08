@@ -7,16 +7,16 @@ class QuestionMaster
     @answer = nil
   end
 
-  def makeQuestion
+  def make_question
     n1 = 1 + rand(20)
     n2 = 1 + rand(20)
-    setAnswer(n1, n2)
+    set_answer(n1, n2)
     @currentQuestion = "what does #{n1} plus #{n2} equal?"
   end
 
   private
 
-  def setAnswer(n1, n2)
+  def set_answer(n1, n2)
     @answer = n1 + n2
   end
 
