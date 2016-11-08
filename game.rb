@@ -15,7 +15,8 @@ class Game
     set_players
     while(@continue_game == true)
       @gm.speak("-------NEW TURN------")
-      @continue_game = get_question
+      # will continue until someone loses
+      get_question
     end
   end
 
@@ -56,7 +57,6 @@ class Game
     @gm.speak(question)
 
     is_answer_correct?(player)
-
   end
 
   def is_answer_correct?(player)
@@ -85,5 +85,6 @@ class Game
     winner = get_winner
     @gm.speak("\n #{winner.name} wins! with a score of #{winner.lives}/3")
     @gm.speak("-----------GAME OVER------------\n goodbye!")
+    @continue_game = false
   end
 end
